@@ -1,0 +1,19 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+        if(nums==null || nums.length==0){
+            return false;
+        }
+Map<Integer, Integer> map = new HashMap<>();
+for(int num: nums){
+if(map.containsKey(num)){
+    return true;
+}else{
+    map.put(num,1);
+}
+
+}
+return false;
+
+
+    }
+}
